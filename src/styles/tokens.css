@@ -1,0 +1,144 @@
+:root {
+  font-family: 'Rajdhani', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff00;
+  --neon-yellow: #ffff00;
+  --neon-orange: #ff6600;
+  --neon-purple: #9900ff;
+  --neon-red: #ff4444;
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+  --panel-bg: #1a1a1a;
+  --panel-border: #333333;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Rajdhani', sans-serif;
+  background: rgba(10,10,10,.85);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Load background image asynchronously without blocking content */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Image is preloaded in main.ts; this URL will be rewritten by Vite */
+  background-image: url('../assets/AcsPX1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show background when loaded */
+body.loaded::before {
+  opacity: 1;
+}
+
+#app { width: 100%; }
+
+a { color: var(--neon-cyan); text-decoration: none; }
+a:hover { color: var(--neon-pink); }
+
+*:focus { outline: 2px solid var(--neon-cyan); outline-offset: 2px; }
+
+/* Custom toast styling for darker background */
+.custom-toast {
+  background-color: var(--darker-bg) !important;
+  border: 1px solid var(--panel-border) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.custom-toast-body {
+  color: var(--text-primary) !important;
+}
+
+/* Warning toast specific styling */
+.custom-toast.Vue-Toastification__toast--warning {
+  background-color: var(--darker-bg) !important;
+  border-left: 4px solid var(--neon-orange) !important;
+}
+
+.custom-toast.Vue-Toastification__toast--warning .Vue-Toastification__toast-body {
+  color: var(--text-primary) !important;
+}
+
+/* Success toast specific styling for ticket notifications */
+.custom-toast.Vue-Toastification__toast--success {
+  background: var(--darker-bg) !important;
+  border: 2px solid var(--neon-green) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.custom-toast.Vue-Toastification__toast--success .Vue-Toastification__toast-body {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.custom-toast.Vue-Toastification__toast--success .Vue-Toastification__toast-icon {
+  color: var(--neon-green) !important;
+}
+
+/* Special styling for ticket won toast - simplified */
+.custom-toast.Vue-Toastification__toast--success {
+  background: var(--darker-bg) !important;
+  border: 2px solid var(--neon-green) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  min-width: 400px !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  z-index: 9999 !important;
+}
+
+/* Position the toast more towards center but not completely centered */
+.Vue-Toastification__container--top-center {
+  top: 30% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.Vue-Toastification__container--top-center .custom-toast.Vue-Toastification__toast--success {
+  margin: 20px auto !important;
+}
+
+.custom-toast.Vue-Toastification__toast--success .Vue-Toastification__toast-body {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  padding: 20px !important;
+}
+
+.custom-toast.Vue-Toastification__toast--success .Vue-Toastification__progress-bar {
+  background: var(--neon-green) !important;
+  height: 2px !important;
+}
+
+
+
+
+
+
+

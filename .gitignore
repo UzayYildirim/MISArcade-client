@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.local
+
+# Compiled JavaScript
+*.vue.js
+*.js.js
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Markdown files
+*.md
+
+# Cloudflare Pages and game assets
+cloudflare-pages.toml
+public/games/
+public/_redirects
+public/manifest.webmanifest

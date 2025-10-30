@@ -1,0 +1,27 @@
+{
+  "name": "arcade-client",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.ts --port 3051",
+    "build": "vite build --config vite.config.ts",
+    "build:cf": "vite build --config vite.config.ts --mode production",
+    "build:root": "vite build --config vite.config.ts --mode root",
+    "preview": "vite preview --config vite.config.ts --port 5175",
+    "preview:cf": "vite preview --config vite.config.ts --port 4173"
+  },
+  "dependencies": {
+    "@vueuse/motion": "^3.0.3",
+    "pocketbase": "^0.26.2",
+    "vue": "^3.5.18",
+    "vue-router": "^4.4.5",
+    "vue-toastification": "2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vue-tsc": "^3.0.5"
+  }
+}
