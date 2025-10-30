@@ -1,4 +1,4 @@
-![MIS Arcade Logo](https://i.imgur.com/Ksh7kxp.png)
+![MIS Arcade Logo](https://i.imgur.com/6bXPCo2.png)
 
 # MIS Arcade Gaming Platform 🎮
 
